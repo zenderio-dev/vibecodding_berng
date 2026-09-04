@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run start:all",
-    "start:all": "concurrently \"npm run start:mcp1\" \"npm run start:context7\"",
+    "start:all": "npx concurrently \"npm run start:mcp1\" \"npm run start:context7\"",
     "start:mcp1": "node mcp-servers/mcp1/server.js",
     "start:context7": "node mcp-servers/context7/client.js",
-    "start:mcp1:watch": "nodemon mcp-servers/mcp1/server.js",
-    "start:context7:watch": "nodemon mcp-servers/context7/client.js",
+    "start:mcp1:watch": "npx nodemon mcp-servers/mcp1/server.js",
+    "start:context7:watch": "npx nodemon mcp-servers/context7/client.js",
     "health:check": "node scripts/health-check.js",
     "test:mcp1": "curl http://localhost:3001/health",
     "test:context7": "curl http://localhost:3002/health"
