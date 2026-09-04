@@ -27,5 +27,18 @@
   },
   "mcp.debug": true,
   "mcp.showServerStatus": true,
-  "mcp.autoStartServers": true
+  "mcp.autoStartServers": true,
+  "launch": {
+    "compounds": [
+      {
+        "name": "MCP Servers",
+        "configurations": ["Start All MCP Servers"],
+        "preLaunchTask": "npm: start:all"
+      }
+    ]
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/mcp-data": true
+  }
 }

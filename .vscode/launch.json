@@ -30,7 +30,8 @@
   "compounds": [
     {
       "name": "Start All MCP Servers",
-      "configurations": ["Start MCP1 Server", "Start Context7 Client"]
+      "configurations": ["Start MCP1 Server", "Start Context7 Client"],
+      "stopAll": true
     }
   ]
 }
