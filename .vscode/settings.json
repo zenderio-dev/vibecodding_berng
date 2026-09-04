@@ -1,0 +1,31 @@
+{
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "mcp.servers": {
+    "mcp1": {
+      "command": "node",
+      "args": ["${workspaceFolder}/mcp-servers/mcp1/server.js"],
+      "env": {
+        "MCP_PORT": "3001",
+        "MCP_SERVER_NAME": "mcp1"
+      },
+      "autoStart": true,
+      "enabled": true
+    },
+    "context7": {
+      "command": "node",
+      "args": ["${workspaceFolder}/mcp-servers/context7/client.js"],
+      "env": {
+        "MCP_PORT": "3002",
+        "CONTEXT7_URL": "http://localhost:3007",
+        "CONTEXT7_API_KEY": ""
+      },
+      "autoStart": true,
+      "enabled": true
+    }
+  },
+  "mcp.debug": true,
+  "mcp.showServerStatus": true,
+  "mcp.autoStartServers": true
+}

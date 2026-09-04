@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Start MCP1 Server",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/mcp-servers/mcp1/server.js",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "MCP_PORT": "3001",
+        "MCP_SERVER_NAME": "mcp1"
+      }
+    },
+    {
+      "name": "Start Context7 Client",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/mcp-servers/context7/client.js",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "MCP_PORT": "3002",
+        "CONTEXT7_URL": "http://localhost:3007",
+        "CONTEXT7_API_KEY": ""
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Start All MCP Servers",
+      "configurations": ["Start MCP1 Server", "Start Context7 Client"]
+    }
+  ]
+}
